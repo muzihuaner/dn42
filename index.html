@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS4242420223 | DN42 Peering Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen pb-12">
+
+    <header class="bg-slate-900 border-b border-slate-800 py-12 mb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <h1 class="text-4xl font-bold text-white mb-2">AS4242420223</h1>
+                    <p class="text-slate-400 text-lg">DN42 Peering Node by <span class="text-indigo-400 font-semibold">Muzihuaner</span></p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-full text-sm font-medium">Ready to Peer</span>
+                    <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-sm font-medium">WireGuard Only</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-5xl">
+        
+        <section class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                <h3 class="text-slate-500 text-sm uppercase tracking-wider mb-2 font-semibold">IPv4 Address Pool</h3>
+                <p class="mono text-xl text-indigo-300">172.21.70.18/32</p>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                <h3 class="text-slate-500 text-sm uppercase tracking-wider mb-2 font-semibold">IPv6 Address Pool</h3>
+                <p class="mono text-lg text-indigo-300 leading-tight">fd99:a023:18f8::/48</p>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                <h3 class="text-slate-500 text-sm uppercase tracking-wider mb-2 font-semibold">Domain</h3>
+                <p class="text-xl text-slate-400">暂无</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center mr-3 text-sm">01</span>
+                开放 Peering 的服务器列表
+            </h2>
+            
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                <div class="p-6 bg-slate-800/50 border-b border-slate-800 flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mono">lax-rn-riose</h3>
+                        <p class="text-slate-400 text-sm">RackNerd (Los Angeles)</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs font-mono bg-slate-700 px-2 py-1 rounded text-slate-300">Region: US-West</span>
+                    </div>
+                </div>
+                <div class="p-6 grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">Public Endpoint</p>
+                            <p class="mono text-slate-200">IPv4: 74.48.5.47</p>
+                            <p class="mono text-slate-500 italic">IPv6: 无</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">DN42 Internal</p>
+                            <p class="mono text-slate-200">IPv4: 172.21.70.18</p>
+                            <p class="mono text-slate-200">IPv6: fd99:a023:18f8::1</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase text-slate-500 font-bold mb-1">WireGuard Public Key</p>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 break-all mono text-sm text-emerald-400 mt-2">
+                            CH7cGvcOaBRrvBSEYXGIWc84bTgHArE8ZpSim7pL3Dw=
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center mr-3 text-sm">02</span>
+                    Peering 规则
+                </h2>
+                <div class="space-y-4 bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <div class="flex gap-4">
+                        <div class="text-amber-500 flex-shrink-0 mt-1">⚠️</div>
+                        <p class="text-slate-300"><strong class="text-white">合规说明：</strong>我不与中国大陆的服务器 Peer，以避免可能的法律风险。</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-500 flex-shrink-0 mt-1">⚙️</div>
+                        <p class="text-slate-300"><strong class="text-white">连接方式：</strong>目前仅支持 WireGuard，暂不提供 PSK (预共享密钥)。</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-indigo-500 flex-shrink-0 mt-1">🛡️</div>
+                        <p class="text-slate-300"><strong class="text-white">BGP 端口：</strong>我会使用您 ASN 的后五位作为 WG 监听端口（如 AS4242420001 使用 20001 端口）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center mr-3 text-sm">03</span>
+                    建立连接步骤
+                </h2>
+                <ul class="space-y-4 text-slate-300">
+                    <li class="flex gap-4 items-start font-medium">
+                        <span class="w-6 h-6 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center text-xs border border-slate-700">1</span>
+                        选择上面列表中延迟（Ping）最低的服务器。
+                    </li>
+                    <li class="flex gap-4 items-start font-medium">
+                        <span class="w-6 h-6 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center text-xs border border-slate-700">2</span>
+                        配置好您那端的 WireGuard 和 BGP 客户端。
+                    </li>
+                    <li class="flex gap-4 items-start font-medium">
+                        <span class="w-6 h-6 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center text-xs border border-slate-700">3</span>
+                        发送 Peering 申请邮件至下方地址。
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-indigo-600 rounded-3xl p-8 text-center md:text-left relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2">准备好 Peering 了吗？</h2>
+                    <p class="text-indigo-100 italic">请发送包含 ASN、公网 IP、DN42 IP 及 MP-BGP 偏好的邮件。</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="mailto:admin@huangetech.com" class="bg-white text-indigo-600 px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition-colors inline-block text-center">
+                        admin@huangetech.com
+                    </a>
+                    <a href="mailto:muzihuaner@hotmail.com" class="text-indigo-200 text-sm hover:text-white transition-colors">
+                        或备用：muzihuaner@hotmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-indigo-500 rounded-full opacity-50"></div>
+        </section>
+
+    </main>
+
+    <footer class="container mx-auto px-4 mt-16 text-center text-slate-600 text-sm">
+        <p>&copy; 2024 AS4242420223. Powered by DN42 & Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
