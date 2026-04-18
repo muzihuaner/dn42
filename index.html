@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AS4242420223 | DN42 Peering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -35,96 +35,95 @@
             background: var(--apple-bg);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
-        .apple-card:hover {
-            transform: scale(1.005);
-        }
 
         .section-gray {
             background-color: var(--apple-section);
         }
+
+        /* 隐藏移动端滚动条但保持功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="leading-relaxed">
 
     <nav class="glass-nav fixed top-0 w-full z-50 border-b border-gray-200">
-        <div class="container mx-auto px-6 h-12 flex items-center justify-between">
-            <div class="font-semibold text-lg tracking-tight">AS4242420223</div>
-            <div class="hidden md:flex space-x-8 text-xs text-gray-600">
-                <a href="#nodes" class="hover:text-black transition-colors">节点详情</a>
-                <a href="#rules" class="hover:text-black transition-colors">Peer 规则</a>
-                <a href="#request" class="hover:text-black transition-colors">申请格式</a>
-                <a href="#contact" class="hover:text-black transition-colors">联系方式</a>
+        <div class="container mx-auto px-4 md:px-6 h-12 flex items-center justify-between">
+            <div class="font-semibold text-base md:text-lg tracking-tight">AS4242420223</div>
+            <div class="flex space-x-4 md:space-x-8 text-[11px] md:text-xs text-gray-600 font-medium">
+                <a href="#nodes" class="hover:text-black transition-colors">节点</a>
+                <a href="#request" class="hover:text-black transition-colors">申请</a>
+                <a href="#contact" class="hover:text-black transition-colors">联系</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-indigo-600 font-semibold mb-3 tracking-tight">HuanGeTech DN42 Network</h2>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">AS4242420223</h1>
-            <p class="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto font-light leading-snug">
+    <header class="pt-28 pb-16 md:pt-40 md:pb-24 text-center px-6">
+        <div class="container mx-auto">
+            <h2 class="text-indigo-600 font-semibold mb-3 tracking-tight text-sm md:text-base">HuanGeTech DN42 Network</h2>
+            <h1 class="text-4xl md:text-7xl font-bold tracking-tighter mb-6">AS4242420223</h1>
+            <p class="text-lg md:text-2xl text-gray-500 max-w-2xl mx-auto font-light leading-snug">
                 稳定、高速的 DN42 节点，致力于构建开放的互联实验网络。
             </p>
-            <div class="mt-10 flex justify-center gap-4">
-                <a href="#request" class="bg-[#0071e3] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0077ed] transition-all">立即 Peering</a>
-                <a href="https://lg-dn42.potat0.cc/detail/las/DN42_4242420223_v4" target="_blank" class="text-[#0066cc] flex items-center gap-1 hover:underline">查看 Looking Glass <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+            <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="#request" class="w-full md:w-auto bg-[#0071e3] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0077ed] transition-all text-center">立即 Peering</a>
+                <a href="https://lg-dn42.potat0.cc/detail/las/DN42_4242420223_v4" target="_blank" class="text-[#0066cc] flex items-center gap-1 hover:underline text-sm font-medium">查看 Looking Glass <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
             </div>
         </div>
     </header>
 
-    <section class="container mx-auto px-4 mb-24">
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="section-gray rounded-3xl p-10 flex flex-col justify-between h-64 border border-transparent hover:border-gray-200 transition-colors">
-                <p class="text-gray-500 font-semibold uppercase text-xs tracking-widest">IPv4 Address Pool</p>
-                <h3 class="text-4xl font-bold mono tracking-tighter text-indigo-600">172.21.70.16/28</h3>
+    <section class="container mx-auto px-6 mb-16 md:mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div class="section-gray rounded-3xl p-8 md:p-10 flex flex-col justify-between h-48 md:h-64 border border-transparent hover:border-gray-200 transition-colors">
+                <p class="text-gray-500 font-semibold uppercase text-[10px] md:text-xs tracking-widest">IPv4 Address Pool</p>
+                <h3 class="text-2xl md:text-4xl font-bold mono tracking-tighter text-indigo-600">172.21.70.16/28</h3>
             </div>
-            <div class="section-gray rounded-3xl p-10 flex flex-col justify-between h-64 border border-transparent hover:border-gray-200 transition-colors">
-                <p class="text-gray-500 font-semibold uppercase text-xs tracking-widest">IPv6 Address Pool</p>
-                <h3 class="text-3xl md:text-4xl font-bold mono tracking-tighter text-indigo-600">fd99:a023:18f8::/48</h3>
+            <div class="section-gray rounded-3xl p-8 md:p-10 flex flex-col justify-between h-48 md:h-64 border border-transparent hover:border-gray-200 transition-colors">
+                <p class="text-gray-500 font-semibold uppercase text-[10px] md:text-xs tracking-widest">IPv6 Address Pool</p>
+                <h3 class="text-xl md:text-4xl font-bold mono tracking-tighter text-indigo-600 break-all md:break-normal">fd99:a023:18f8::/48</h3>
             </div>
         </div>
     </section>
 
-    <section id="nodes" class="section-gray py-24">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold tracking-tight">开放 Peering 的服务器</h2>
+    <section id="nodes" class="section-gray py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">开放 Peering 的服务器</h2>
             </div>
             
-            <div class="apple-card bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
-                <div class="flex flex-col md:flex-row justify-between items-start mb-10 gap-4">
+            <div class="apple-card bg-white rounded-3xl p-6 md:p-12 shadow-sm border border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-10 gap-4">
                     <div>
-                        <span class="text-orange-500 font-semibold text-sm">US-West</span>
-                        <h3 class="text-3xl font-bold mt-1 tracking-tight">lax-rn-riose</h3>
-                        <p class="text-gray-400">RackNerd (Los Angeles)</p>
+                        <span class="text-orange-500 font-semibold text-xs md:text-sm">US-West</span>
+                        <h3 class="text-2xl md:text-3xl font-bold mt-1 tracking-tight">lax-rn-riose</h3>
+                        <p class="text-gray-400 text-sm">RackNerd (Los Angeles)</p>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-500 uppercase tracking-widest">
+                    <div class="bg-gray-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-widest">
                         WireGuard Only
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="space-y-6 md:space-y-8">
                         <div>
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">公网 Endpoint</h4>
-                            <div class="space-y-1 mono text-sm">
+                            <h4 class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">公网 Endpoint</h4>
+                            <div class="space-y-1 mono text-xs md:text-sm">
                                 <p class="text-gray-800 font-medium">74.48.5.47</p>
-                                <p class="text-gray-400 font-light italic text-xs leading-relaxed">2607:f130:0:105:216:3cff:fe16:7496</p>
+                                <p class="text-gray-400 font-light italic leading-relaxed break-all">2607:f130:0:105:216:3cff:fe16:7496</p>
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">DN42 内部地址</h4>
-                            <div class="space-y-1 mono text-sm">
+                            <h4 class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">DN42 内部地址</h4>
+                            <div class="space-y-1 mono text-xs md:text-sm">
                                 <p class="text-gray-800">IPv4: 172.21.70.18</p>
                                 <p class="text-gray-800">IPv6: fd99:a023:18f8::8</p>
-                                <p class="text-blue-500 font-medium text-xs mt-2 italic">Link-local: fe80::1233/64</p>
+                                <p class="text-blue-500 font-medium text-[10px] md:text-xs mt-2 italic font-sans">Link-local: fe80::1233/64</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">WireGuard Public Key</h4>
-                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 break-all mono text-sm text-gray-700 leading-relaxed">
+                        <h4 class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">WireGuard Public Key</h4>
+                        <div class="bg-gray-50 p-4 md:p-6 rounded-2xl border border-gray-100 break-all mono text-[11px] md:text-sm text-gray-700 leading-relaxed">
                             CH7cGvcOaBRrvBSEYXGIWc84bTgHArE8ZpSim7pL3Dw=
                         </div>
                     </div>
@@ -133,78 +132,79 @@
         </div>
     </section>
 
-    <section id="rules" class="py-24 container mx-auto px-4 max-w-5xl">
-        <h2 class="text-3xl font-bold mb-12 tracking-tight text-center">Peering 规则</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-8">
+    <section id="rules" class="py-16 md:py-24 container mx-auto px-6 max-w-5xl">
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 md:mb-12 tracking-tight text-center text-gray-900">Peering 规则</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
+            <div class="p-4 md:p-8">
                 <div class="text-3xl mb-4">🚫</div>
-                <h4 class="font-semibold text-lg mb-2">合规限制</h4>
-                <p class="text-gray-500 text-sm">不与中国大陆境内服务器建立 Peer，以确保双方链路符合当地法律合规要求。</p>
+                <h4 class="font-semibold text-lg mb-2 text-gray-900">合规限制</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">不与中国大陆境内服务器建立 Peer，以确保链路符合当地法律合规要求。</p>
             </div>
-            <div class="p-8">
+            <div class="p-4 md:p-8 border-y md:border-y-0 md:border-x border-gray-100">
                 <div class="text-3xl mb-4">🔐</div>
-                <h4 class="font-semibold text-lg mb-2">连接协议</h4>
-                <p class="text-gray-500 text-sm">目前仅支持 WireGuard，暂不提供 Pre-shared Key (PSK) 验证方式。</p>
+                <h4 class="font-semibold text-lg mb-2 text-gray-900">连接协议</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">目前仅支持 WireGuard，暂不提供 Pre-shared Key (PSK) 验证方式。</p>
             </div>
-            <div class="p-8">
+            <div class="p-4 md:p-8">
                 <div class="text-3xl mb-4">🔌</div>
-                <h4 class="font-semibold text-lg mb-2">端口分配</h4>
-                <p class="text-gray-500 text-sm">我会固定使用您 ASN 的后五位作为 WG 监听端口（如 20001）。</p>
+                <h4 class="font-semibold text-lg mb-2 text-gray-900">端口分配</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">固定使用您 ASN 的后五位作为监听端口（如 4242420001 则使用 20001）。</p>
             </div>
         </div>
     </section>
 
-    <section id="request" class="py-24 section-gray">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
-                <div class="p-10 md:p-16">
-                    <h2 class="text-3xl font-bold mb-4 tracking-tight">发送 Peer Request</h2>
-                    <p class="text-gray-500 mb-10">请按照以下格式准备您的 Peering 申请信息：</p>
+    <section id="request" class="py-16 md:py-24 section-gray">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
+                <div class="p-8 md:p-16">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-gray-900">发送 Peer Request</h2>
+                    <p class="text-gray-500 mb-10 text-sm md:text-base">请按照以下格式准备您的 Peering 申请信息：</p>
                     
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <ul class="space-y-6 text-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+                        <ul class="space-y-5 text-xs md:text-sm">
                             <li class="flex items-start gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">1</span>
-                                <div><strong class="text-gray-900 block">Node</strong> 想要对等互联的节点。</div>
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">1</span>
+                                <div><strong class="text-gray-900 block font-semibold">Node</strong> 想要对等互联的节点。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">2</span>
-                                <div><strong class="text-gray-900 block">Public Key</strong> 你的 WireGuard 公钥。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">2</span>
+                                <div><strong class="text-gray-900 block font-semibold">Public Key</strong> 你的 WireGuard 公钥。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">3</span>
-                                <div><strong class="text-gray-900 block">Endpoint</strong> 你的 WG 公网信息（若为动态/无公网请说明）。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">3</span>
+                                <div><strong class="text-gray-900 block font-semibold">Endpoint</strong> 你的 WG 公网信息（若为动态/无公网请说明）。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">4</span>
-                                <div><strong class="text-gray-900 block">ASN</strong> 你的自治系统编号。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">4</span>
+                                <div><strong class="text-gray-900 block font-semibold">ASN</strong> 你的自治系统编号。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">5</span>
-                                <div><strong class="text-gray-900 block">Sessions</strong> IPv6 + IPv4 / 仅 IPv6 / 仅 IPv4。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">5</span>
+                                <div><strong class="text-gray-900 block font-semibold">Sessions</strong> IPv6 + IPv4 / 仅 IPv6 / 仅 IPv4。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">6</span>
-                                <div><strong class="text-gray-900 block">Capabilities</strong> MP-BGP / Extended next hop / Extended messages。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">6</span>
+                                <div><strong class="text-gray-900 block font-semibold">Capabilities</strong> MP-BGP / Extended next hop / Extended messages。</div>
                             </li>
-                            <li class="items-start flex gap-4">
-                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">7</span>
-                                <div><strong class="text-gray-900 block">IP Addresses</strong> 对应会话的 IP（MP-BGP 且无 ENH 时需双栈）。</div>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-6 h-6 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-[10px]">7</span>
+                                <div><strong class="text-gray-900 block font-semibold">IP Addresses</strong> 对应会话的 IP（MP-BGP 且无 ENH 时需双栈）。</div>
                             </li>
                         </ul>
 
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-gray-100 to-gray-50 rounded-2xl blur opacity-25"></div>
-                            <div class="relative bg-gray-50 p-8 rounded-2xl border border-gray-100 mono text-xs leading-relaxed text-gray-600">
-                                <p class="text-gray-400 mb-4 tracking-widest uppercase font-bold">Example E.g.</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">Node:</span> lax-rn-riose</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">Public key:</span> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">Endpoint:</span> your.domain.tld:20223</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">ASN:</span> 4242420223</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">Sessions:</span> IPv6 + IPv4</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">Capabilities:</span> MP-BGP, ENH</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">IPv6:</span> fe80::1816</p>
-                                <p><span class="text-indigo-600 font-semibold text-xs">IPv4:</span> None</p>
+                            <div class="relative bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 overflow-x-auto no-scrollbar">
+                                <p class="text-gray-400 mb-4 tracking-widest uppercase font-bold text-[10px]">E.g. Example</p>
+                                <pre class="mono text-[11px] md:text-xs leading-relaxed text-gray-600 space-y-1">
+<span class="text-indigo-600 font-semibold">Node:</span> lax-rn-riose
+<span class="text-indigo-600 font-semibold">Public key:</span> xxxxx...xxxxxxx
+<span class="text-indigo-600 font-semibold">Endpoint:</span> your.domain.tld:20223
+<span class="text-indigo-600 font-semibold">ASN:</span> 4242420223
+<span class="text-indigo-600 font-semibold">Sessions:</span> IPv6 + IPv4
+<span class="text-indigo-600 font-semibold">Capabilities:</span> MP-BGP, ENH
+<span class="text-indigo-600 font-semibold">IPv6:</span> fe80::1816
+<span class="text-indigo-600 font-semibold">IPv4:</span> None</pre>
                             </div>
                         </div>
                     </div>
@@ -213,50 +213,52 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-4 tracking-tight">准备好建立连接了吗？</h2>
-            <p class="text-gray-500 mb-10 text-lg">请发送以上格式的邮件至我们的邮箱</p>
+    <section id="contact" class="py-20 md:py-24 text-center px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-gray-900">准备好建立连接了吗？</h2>
+            <p class="text-gray-500 mb-10 text-base md:text-lg font-light">请发送以上格式的邮件至我们的邮箱</p>
             <div class="space-y-6">
-                <a href="mailto:admin@huangetech.com" class="text-3xl font-semibold text-blue-600 hover:underline block tracking-tight">admin@huangetech.com</a>
-                <p class="text-gray-400 text-xs uppercase tracking-widest font-bold">Secondary: muzihuaner@hotmail.com</p>
+                <a href="mailto:admin@huangetech.com" class="text-xl md:text-3xl font-semibold text-blue-600 hover:underline block tracking-tight break-all md:break-normal">admin@huangetech.com</a>
+                <p class="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Secondary: muzihuaner@hotmail.com</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-gray-100 pt-16 pb-12">
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-10">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-                <div>
-                    <h5 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6">社区资源</h5>
-                    <ul class="space-y-3 text-xs text-gray-500">
-                        <li><a href="https://dn42.dev" class="hover:text-black">DN42 Wiki</a></li>
-                        <li><a href="https://explorer.dn42.dev" class="hover:text-black">Network Explorer</a></li>
-                        <li><a href="https://git.dn42.dev/" class="hover:text-black">Git Repository</a></li>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 mb-16">
+                <div class="col-span-1">
+                    <h5 class="text-[10px] font-bold text-gray-900 uppercase tracking-widest mb-6">社区资源</h5>
+                    <ul class="space-y-3 text-[11px] text-gray-500">
+                        <li><a href="https://dn42.dev" class="hover:text-black transition-colors">DN42 Wiki</a></li>
+                        <li><a href="https://explorer.dn42.dev" class="hover:text-black transition-colors">Network Explorer</a></li>
+                        <li><a href="https://git.dn42.dev/" class="hover:text-black transition-colors">Git Repository</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h5 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6">友情链接</h5>
-                    <ul class="space-y-3 text-xs text-gray-500">
+                <div class="col-span-1">
+                    <h5 class="text-[10px] font-bold text-gray-900 uppercase tracking-widest mb-6">友情链接</h5>
+                    <ul class="space-y-3 text-[11px] text-gray-500">
+                        <li><a href="https://huangetech.com" class="hover:text-black">欢哥科技</a></li>
+                        <li><a href="https://huancloud.cn" class="hover:text-black">欢云</a></li>
                         <li><a href="https://blog.quickso.cn" class="hover:text-black">点滴记忆</a></li>
-                        <li><a href="https://dn42.potat0.cc/" class="hover:text-black">Potat0's Node</a></li>
-                        <li><a href="https://lantian.pub/" class="hover:text-black">Lan Tian @ Blog</a></li>
+                        <li><a href="https://dn42.potat0.cc/" class="hover:text-black transition-colors">Potat0's Node</a></li>
+                        <li><a href="https://lantian.pub/" class="hover:text-black transition-colors">Lan Tian @ Blog</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h5 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-6">关于</h5>
-                    <ul class="space-y-3 text-xs text-gray-500">
-                        <li><a href="https://huangetech.com" class="hover:text-black">HuanGeTech 官网</a></li>
-                        <li><a href="https://github.com/muzihuaner/dn42" class="hover:text-black">GitHub 仓库</a></li>
+                <div class="col-span-2 md:col-span-1">
+                    <h5 class="text-[10px] font-bold text-gray-900 uppercase tracking-widest mb-6">关于项目</h5>
+                    <ul class="space-y-3 text-[11px] text-gray-500">
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed max-w-sm">HuanGeTech 致力于在非商业环境下探索网络协议。AS4242420223 节点完全运行在隔离的实验网络中。</p>
+                        <li><a href="https://github.com/muzihuaner/dn42" class="hover:text-black transition-colors">GitHub 仓库</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
+            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-gray-400 text-center md:text-left">
                 <p>Copyright &copy; 2026 HuanGeTech. 所有的实验性连接仅用于学术交流。</p>
                 <div class="flex items-center space-x-4">
                     <span>Powered by DN42 Network</span>
-                    <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
+                    <span class="w-1 h-1 bg-gray-200 rounded-full hidden md:inline"></span>
                     <span>Designed by Gemini</span>
                 </div>
             </div>
